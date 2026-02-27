@@ -1,0 +1,44 @@
+.obsDisplay[b-kmphyaulrn] {
+    flex: 1;
+    display: flex;
+    background-color: darkgreen;
+    flex-direction: row;
+}
+
+.buttonContainer[b-kmphyaulrn] {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: deepskyblue;
+    /* max-width: 30%; */
+    /* max-height: 100%; */
+}
+
+.previewDisplay[b-kmphyaulrn] {
+    flex: 2;
+    background-color: lightcoral;
+}
+
+.previewDisplayHeader[b-kmphyaulrn] {
+    flex: 1;
+    /* background-color: lightpink; */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.previewDisplayHeaderTitle[b-kmphyaulrn] {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.SizeForWindowPreview[b-kmphyaulrn] {
+    flex: 1;
+    /* background-color: lightyellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

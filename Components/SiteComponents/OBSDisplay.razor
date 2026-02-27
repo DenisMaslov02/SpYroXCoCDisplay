@@ -1,0 +1,36 @@
+<div class="obsDisplay">
+    <div class="buttonContainer">
+        @* @onclick=ToggleSidebar *@
+        <button>Test</button>
+        <button>Test</button>
+        <button>Test</button>
+        <button>Test</button>
+        <button>Test</button>
+    </div>
+    <div class="previewDisplay">
+        <div class="previewDisplayHeader">
+            <div class="previewDisplayHeaderTitle">
+                OBS Display
+            </div>
+            <div class="SizeForWindowPreview">
+                <span style="margin-right: 10px">Breite:</span>
+                <InputText style="margin-right: 10px" @bind-Value=@dummyText />
+                <span style="margin-right: 10px">Höhe:</span>
+                <InputText style="margin-right: 10px" @bind-Value=@dummyText />
+            </div>
+        </div>
+
+        <div>
+            Dummy Anzeige
+        </div>
+
+    </div>
+    <p>Hier soll die Anzeige für OBS erstellt werden.</p>
+</div>
+
+@code
+{
+
+    private string dummyText = "text";
+    // Hier soll die Anzeige für OBS erstellt werden.
+}

@@ -1,0 +1,55 @@
+@layout MainLayout
+@page "/"
+@page "/mycustomsite"
+@using SpYroXCoCDisplay.Components.SiteComponents
+@rendermode InteractiveServer
+
+@inject COCApiCaller cocApiCaller
+
+<PageTitle>Kontroll-Seite</PageTitle>
+
+<div class="header">
+    <h1>Welche Daten soll den angezeigt werden?</h1>
+</div>
+<div class="main">
+
+    <div class="topBar">
+        <span style="margin-right: 10px">Spieler Tag:</span>
+        <InputText style="margin-right: 10px" @bind-Value=playerTag />
+
+        <button style="margin-right: 10px;margin-left: 10px" @onclick=ConfirmSettings>Bestätigen</button>
+
+        <span style="margin-right: 10px">Api Token:</span>
+        <InputText style="margin-right: 10px" @bind-Value=apiToken />
+    </div>
+    <div class="content">
+        <OBSDisplay />
+    </div>
+</div>
+
+@code
+{
+    private bool isSidebarOpen = true;
+
+    private string apiToken =
+"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjRkZWZiZjJiLWIzZjctNDVjNy1iYTUyLTExNzc5NmEwYTQxNSIsImlhdCI6MTc3MTI2MjA2NCwic3ViIjoiZGV2ZWxvcGVyL2JhNTE3N2NmLThjNzktYjFjNy00ZWMyLTA2ODFjZmVhOWQ4NCIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjkxLjY0LjI3LjExMCJdLCJ0eXBlIjoiY2xpZW50In1dfQ.1cieEgrerdk20IZgkj3-nvKNgT2lgKmRiVIXRzIx7k9c8tfFCoKxwMX3gcsi6hvlDZkv9y6b5j4Z80arPIg6xQ";
+    private string playerTag = "#RR09LY88"; // Toms Player Tag
+
+    private void ToggleSidebar()
+    {
+        Console.WriteLine("Toggling sidebar");
+        isSidebarOpen = !isSidebarOpen;
+    }
+
+    private void ConfirmSettings()
+    {
+
+
+    }
+
+    private void ButtonClick()
+    {
+        Console.WriteLine("Knopf wurde gedrückt");
+    }
+
+}
