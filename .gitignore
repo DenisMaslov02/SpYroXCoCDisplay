@@ -205,7 +205,7 @@ orleans.codegen.cs
 
 # Since there are multiple workflows, uncomment next line to ignore bower_components
 # (https://github.com/github/gitignore/pull/1529#issuecomment-104372622)
-#bower_components/
+# bower_components/
 
 # RIA/Silverlight projects
 Generated_Code/
@@ -295,19 +295,7 @@ obj/
 *_LOCAL_*.txt
 *_REMOTE_*.txt
 
-### Web ###
-*.asp
-*.cer
-*.csr
-*.css
-*.htm
-*.html
-*.js
-*.jsp
-*.php
-*.rss
-*.wasm
-*.wat
-*.xhtml
-
 # End of https://www.toptal.com/developers/gitignore/api/dotnetcore,git,aspnetcore,web
+
+
+
