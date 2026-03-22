@@ -1,0 +1,20 @@
+<div class="mainDisplay" style="max-width:@widthCssString; max-height:@heightCssString; width:@widthCssString; height:@heightCssString">
+    Dummy Anzeige
+</div>
+
+@code{
+
+    [Parameter]
+    public int width { get; set; } = 500;
+    [Parameter]
+    public int height { get; set; } = 500;
+
+    private string widthCssString;
+    private string heightCssString;
+        
+    protected override void OnInitialized(){
+        widthCssString = width + "px";
+        heightCssString = height + "px";
+    }
+
+}

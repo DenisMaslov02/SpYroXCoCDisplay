@@ -2,10 +2,7 @@
     <div class="buttonContainer">
         @* @onclick=ToggleSidebar *@
         <button>Test</button>
-        <button>Test</button>
-        <button>Test</button>
-        <button>Test</button>
-        <button>Test</button>
+
     </div>
     <div class="previewDisplay">
         <div class="previewDisplayHeader">
@@ -14,14 +11,13 @@
             </div>
             <div class="SizeForWindowPreview">
                 <span style="margin-right: 10px">Breite:</span>
-                <InputText style="margin-right: 10px" @bind-Value=@dummyText />
+                <InputNumber style="margin-right: 10px" @bind-Value=@pixel_X @onchange=ReloadPreview @on/>
                 <span style="margin-right: 10px">Höhe:</span>
-                <InputText style="margin-right: 10px" @bind-Value=@dummyText />
+                <InputNumber style="margin-right: 10px" @bind-Value=@pixel_Y @onchange=ReloadPreview/>
             </div>
         </div>
-
-        <div>
-            Dummy Anzeige
+        <div class="mainStatsViewPanel">
+            <Statsview @key=@reloadKey width=@pixel_X height=@pixel_Y />
         </div>
 
     </div>
@@ -30,7 +26,15 @@
 
 @code
 {
-
+    private int pixel_X = 500;
+    private int pixel_Y = 500;
     private string dummyText = "text";
     // Hier soll die Anzeige für OBS erstellt werden.
+    private int reloadKey = 0;
+
+    private void ReloadPreview()
+    {
+        reloadKey++;
+    }
+
 }
